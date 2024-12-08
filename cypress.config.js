@@ -23,8 +23,10 @@ async function setupNodeEvents(on, config) {
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents,
-    specPattern: "cypress/e2e/features/*.feature",
-    baseUrl: "https://www.saucedemo.com",
+    specPattern: ["cypress/e2e/features/*.feature"],
+
+    baseUrl: "https://magento.softwaretestingboard.com/customer/account/create/",
+    // baseUrl: "https://magento.softwaretestingboard.com/customer/account/login/",
     chromeWebSecurity: false,
     env: {
       allureReuseAfterSpec: true,
